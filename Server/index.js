@@ -1,16 +1,18 @@
+// To run the app "npm run dev"
 // Create basic express nodejs server
 
 // Init express
 const express = require('express');
 
-// import Auth route
-const authRoutes = require("./routes/auth.js")
 //cors: to cors original requests
 const cors = require('cors');
 
+// import Auth route
+const authRoutes = require("./routes/auth.js")
+
 // create instans for the application 
 const app = express();
-// process.env.PORT : for delploy ||| 5000: for local
+// process.env.PORT : for delploy ||| 5050: for local
 const PORT = process.env.PORT || 5050;
 
 require('dotenv').config();
