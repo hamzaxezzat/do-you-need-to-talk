@@ -22,8 +22,12 @@ app.use(express.json());
 app.use(express.urlencoded())
 
 // ========== Routing ==========
-// root rout
+// ===== root route
 app.get('/',(req,res) => {
     res.send('Hello,World');
 })
+// ===== auth route
+app.use('/auth', authRoutes)
+
+
 app.listen(PORT,()=>console.log(`Server running on port http://localhost:${PORT}`))
